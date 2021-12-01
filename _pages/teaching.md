@@ -13,23 +13,23 @@ Organize your courses by years, topics, or universities, however you like! -->
 
 
 
-## __Teaching Assitant at EPFL__
+## __Teaching Assistant at EPFL__
 
-- __COM208 - Computer Networks__
+- __[COM208 - Computer Networks](https://edu.epfl.ch/coursebook/en/computer-networks-COM-208)__
 	- Fall 2021
 	- Fall 2020
 	- Fall 2019
 	- Fall 2018
 	- Fall 2017
 
-- __CS322 - Introduction to Database Systems__
+- __[CS322 - Introduction to Database Systems](https://edu.epfl.ch/coursebook/en/introduction-to-database-systems-CS-322)__
 	- Spring 2021
 	- Spring 2020
 
 
-## __Teaching Assitant at NTUA__
+## __Teaching Assistant at NTUA__
 
-- __3.4.01.1 - Introduction to Computer Programming__
+- __[3.4.01.1 - Introduction to Computer Programming](https://courses.softlab.ntua.gr/progintro/2011b/)__
 	- Fall 2011
 
 

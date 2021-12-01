@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: publications
-description: More frequently updated publications can be found at <a href="https://scholar.google.com/citations?user=opYjaesAAAAJ&hl" target="_blank">Google Scholar</a>.<br/><br/>Following publications by categories in reversed chronological order. 
+description: More frequently updated publications can be found at <a href="https://scholar.google.com/citations?user=opYjaesAAAAJ" target="_blank">Google Scholar</a>. 
 years: [2019]
 nav: true
 ---

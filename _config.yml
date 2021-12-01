@@ -2,10 +2,10 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Aunn raza
-email: aunn.raza@epfl.ch
+title: Georgia Fragkouli
+email: georgia.fragkouli@epfl.ch
 description: > # this means to ignore newlines until "url:"
-  Aunn Raza homepage
+  Georgia's homepage
 footer_text: 
   # >
   # Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
@@ -37,11 +37,11 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 # Social integration
 # -----------------------------------------------------------------------------
 
-github_username: syedaunn
-twitter_username: aunnraza
-linkedin_username: aunnraza
-scholar_userid: iSm-PtcAAAAJ
-orcid_id: 0000-0002-2586-3334
+github_username: georgia-fragkouli
+twitter_username:
+linkedin_username: georgia-fragkouli
+scholar_userid: opYjaesAAAAJ
+orcid_id:
 medium_username: # your Medium username
 quora_username: # your Quora username
 publons_id: # your ID on Publons
@@ -51,14 +51,14 @@ blogger_url: # your blogger URL
 contact_note: #>
 #  You can even add a little note about which of these is the best way to reach you.
 
-google_analytics: UA-XXXXXXXXX # out your google-analytics code
+google_analytics: # out your google-analytics code
 
 # -----------------------------------------------------------------------------
 # Blog
 # -----------------------------------------------------------------------------
 
 blog_name: # al-folio  # your blog must have a name for it to show up in the nav bar
-blog_description: a simple whitespace theme for academics
+blog_description: #a simple whitespace theme for academics
 permalink: /blog/:year/:title/
 
 # Pagination
@@ -121,7 +121,7 @@ plugins:
 
 scholar:
 
-  last_name: Raza
+  last_name: Fragkouli
 
   style: apa
   locale: en
