@@ -1,8 +1,0 @@
-*.gem
-*.rb
-*.out
-*.csl
-*.gemspec
-vendor/
-.DS_Store
-.bundle/
