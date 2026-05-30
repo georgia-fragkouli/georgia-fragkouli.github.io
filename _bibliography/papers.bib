@@ -19,17 +19,14 @@
   timestamp = {Tue, 29 Dec 2020 18:31:43 +0100},
   biburl    = {https://dblp.org/rec/conf/hotos/AlpKFF19.bib},
   bibsource = {dblp computer science bibliography, https://dblp.org},
-  html  = {https://infoscience.epfl.ch/record/268414},
-  pdf = {hotos19_protean.pdf},
-  abbr  = {HotOS 19},
-  type = {CONFERENCE},
-  abstract = {While showing great promise, smart contracts are difficult to program correctly, as they need a deep understanding of cryptography and distributed algorithms, and offer limited functionality, as they have to be deterministic and cannot operate on secret data. In this paper we present Protean, a general-purpose decentralized computing platform that addresses these limitations by moving from a monolithic execution model, where all participating nodes store all the state and execute every computation, to a modular execution-model. Protean employs secure specialized modules, called functional units, for building decentralized applications that are currently insecure or impossible to implement with smart contracts. Each functional unit is a distributed system that provides a special-purpose functionality by exposing atomic transactions to the smart-contract developer. Combining these transactions into arbitrarily-defined workflows, developers can build a larger class of decentralized applications, such as provably-secure and fair lotteries or e-voting.},
+  abbr  = {HotOS 2019},
+  slides = {https://bford.info/pub/os/protean-slides.pdf},
 }
 
 
 @article{DBLP:journals/popets/FragkouliAF19,
   author    = {Georgia Fragkouli and
-               Katerina J. Argyraki and
+               Katerina Argyraki and
                Bryan Ford},
   title     = {MorphIT: Morphing Packet Reports for Internet Transparency},
   journal   = {Proc. Priv. Enhancing Technol.},
@@ -42,9 +39,101 @@
   timestamp = {Tue, 01 Sep 2020 13:13:22 +0200},
   biburl    = {https://dblp.org/rec/journals/popets/FragkouliAF19.bib},
   bibsource = {dblp computer science bibliography, https://dblp.org},
-  html  = {https://infoscience.epfl.ch/record/270336},
-  pdf = {pets19_morphit.pdf},
-  abbr  = {PETS 19},
-  type = {CONFERENCE},
-  abstract = {Can we improve Internet transparency without worsening user anonymity? For a long time, researchers have been proposing transparency systems, where traffic reports produced at strategic network points help assess network behavior and verify service-level agreements or neutrality compliance. However, such reports necessarily reveal when certain traffic appeared at a certain network point, and this information could, in principle, be used to compromise low-latency anonymity networks like Tor. In this paper, we examine whether more Internet transparency necessarily means less anonymity. We start from the information that a basic transparency solution would publish about a network and study how that would impact the anonymity of the network’s users. Then we study how to change, in real time, the time granularity of traffic reports in order to preserve both user anonymity and report utility. We evaluate with real and synthetic data and show that our algorithm can offer a good anonymity/utility balance, even in adversarial scenarios where aggregates consist of very few flows.},
+  abbr  = {PETS 2019},
+}
+
+@unpublished{FragkouliV26uRDMA,
+  author = {Georgia Fragkouli and Laurent Vanbever},
+  title = {uRDMA: Faster RDMA by Partially Unloading NIC Tasks Back to the CPU},
+  year = {2026},
+  note = {Under Preparation},
+  abbr = {Under Preparation},
+}
+
+@unpublished{FragkouliNTVA26Transparency,
+  author = {Georgia Fragkouli and Pavlos Nikolopoulos and Muoi Tran and Laurent Vanbever and Katerina Argyraki},
+  title = {Toward Internet Performance Transparency},
+  year = {2026},
+  note = {Under Preparation},
+  abbr = {Under Preparation},
+}
+
+@inproceedings{BasescuFANFBCEB26Limix,
+  author = {Cristina Băsescu and Georgia Fragkouli and Enis Ceyhun Alp and Michael F. Nowlan and Jose M. Faleiro and Gaylor Bosson and Kelong Cong and Pierluca Borsò-Tan and Vero Estrada-Galiñanes and Bryan Ford},
+  title = {Limix: Limiting Lamport Exposure to Distant Failures in Globally-Managed Distributed Systems},
+  booktitle = {NINeS},
+  year = {2026},
+  abbr = {NINeS 2026},
+  url  = {https://doi.org/10.4230/OASIcs.NINeS.2026.3},
+  code = {https://github.com/dedis/limix},
+  talk = {https://vimeo.com/showcase/NINeS?video=1161804036},
+}
+
+@article{FragkouliV25FasterOffloads,
+  author = {Georgia Fragkouli and Laurent Vanbever},
+  title = {Faster Offloads by Unloading them---The RDMA Case},
+  journal = {arXiv},
+  year = {2025},
+  abbr = {arXiv 2025},
+  url = {https://arxiv.org/abs/2510.00735},
+}
+
+@inproceedings{SchneiderSFV25Transient,
+  author = {Roland Schmid and Tibor Schneider and Georgia Fragkouli and Laurent Vanbever},
+  title = {Transient Forwarding Anomalies and How to Find Them},
+  booktitle = {CoNEXT},
+  year = {2025},
+  abbr = {CoNEXT 2025},
+  url = {https://dl.acm.org/doi/10.1145/3730973},
+  slides = {https://nsg.ee.ethz.ch/files/public/slides/2025-12-01-roschmi-conext-trix_1.pdf},
+  code = {https://github.com/nsg-ethz/trix},
+}
+
+@article{SchmidSFV25iBGP,
+  author = {Roland Schmid and Tibor Schneider and Georgia Fragkouli and Laurent Vanbever},
+  title = {The Effects of iBGP Convergence},
+  journal = {arXiv},
+  year = {2025},
+  abbr = {arXiv 2025},
+  url = {https://doi.org/10.48550/arXiv.2503.15249},
+  code = {https://github.com/nsg-ethz/router-lab},
+}
+
+@inproceedings{HosseiniFNA24Consistency,
+  author = {Mahdi Hosseini and Georgia Fragkouli and Pavlos Nikolopoulos and Katerina Argyraki},
+  title = {Flow/Path Performance Consistency},
+  booktitle = {HotNets},
+  year = {2024},
+  abbr = {HotNets 2024},
+  url = {https://dl.acm.org/doi/10.1145/3696348.3696887},
+}
+
+@inproceedings{SchmidSFV23BGP,
+  author = {Roland Schmid and Tibor Schneider and Georgia Fragkouli and Laurent Vanbever},
+  title = {Predicting Specification Violations During BGP Convergence},
+  booktitle = {CoNEXT Student Workshop},
+  year = {2023},
+  abbr = {CoNEXT Student Workshop 2023},
+  url = {https://dl.acm.org/doi/10.1145/3630202.3630235},
+  slides = {https://nsg.ee.ethz.ch/files/public/slides/2023-12-08-bgpseer-conext-sw_1.pdf},
+}
+
+@inproceedings{DietmullerFV23Learning,
+  author = {Alexander Dietmüller and Georgia Fragkouli and Laurent Vanbever},
+  title = {Learning Distributions to Detect Anomalies Using All the Network Traffic},
+  booktitle = {SIGCOMM Posters},
+  year = {2023},
+  abbr = {SIGCOMM Posters 2023},
+  url = {https://dl.acm.org/doi/10.1145/3603269.3610837},
+  poster = {https://www.research-collection.ethz.ch/entities/publication/066fd511-c012-4f70-8250-3092a7000bb0},
+}
+
+@phdthesis{Fragkouli22Thesis,
+  author = {Georgia Fragkouli},
+  title = {Toward Internet Performance Transparency},
+  school = {EPFL},
+  year = {2022},
+  abbr = {EPFL PhD THESIS 2022},
+  url = {https://infoscience.epfl.ch/handle/20.500.14299/190431},
+  slides = {https://bford.info/thesis/2022-fragkouli/private-defense.pdf},
 }

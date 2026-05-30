@@ -3,7 +3,7 @@
 # -----------------------------------------------------------------------------
 
 title: Georgia Fragkouli
-email: georgia.fragkouli@epfl.ch
+email: gfragkouli@ethz.ch
 description: > # this means to ignore newlines until "url:"
   Georgia's homepage
 footer_text: 
@@ -37,11 +37,11 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 # Social integration
 # -----------------------------------------------------------------------------
 
-github_username: georgia-fragkouli
+github_username: #georgia-fragkouli
 twitter_username:
 linkedin_username: georgia-fragkouli
-scholar_userid: opYjaesAAAAJ
-orcid_id:
+scholar_userid: x7fYhXcAAAAJ
+orcid_id: 0000-0001-7419-2971
 medium_username: # your Medium username
 quora_username: # your Quora username
 publons_id: # your ID on Publons
@@ -123,12 +123,14 @@ scholar:
 
   last_name: Fragkouli
 
-  style: apa
+  style: #apa
   locale: en
 
   source: /_bibliography/
   bibliography: papers.bib
   bibliography_template: bib
+  sort_by: year
+  order: descending
 
   replace_strings: true
   join_strings: true

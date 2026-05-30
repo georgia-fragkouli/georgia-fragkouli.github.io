@@ -1,9 +1,8 @@
 <header>
 
     <!-- Nav Bar -->
-    <nav id="navbar" class="navbar navbar-light bg-white navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}">
+    <nav id="navbar" data-page-title="{{ page.title }}" class="navbar navbar-light bg-white navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}">
     <div class="container">
-      {% if page.title != "about" %}
       {% assign name = site.title | split: ' ' %}
       {% assign firstname = name | first %}
       {% if name.size > 2 %}
@@ -12,12 +11,12 @@
          {% assign middlenames = '' %}
       {% endif %}
       {% assign lastname = name | last %}
-      <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl | prepend: site.url }}/">
-       <span class="font-weight-bold">{{ firstname }}</span> {{ middlenames }}  {{ lastname }}
+      <a id="navbar-name" class="navbar-brand title font-weight-lighter {% if page.title == 'About' %}d-none{% endif %}" href="{{ site.baseurl | prepend: site.url }}/">
+        {{ firstname }} {{ middlenames }} {{ lastname }}
       </a>
-      {% elsif site.show_social_icons %}
+      {% if page.title == "About" and site.show_social_icons %}
         <!-- Social Icons -->
-        <div class="row ml-1 ml-sm-0">
+        <div id="navbar-about-social" class="row ml-1 ml-sm-0">
           {% include social.html %}
         </div>
       {% endif %}
@@ -29,12 +28,12 @@
         <span class="icon-bar bottom-bar"></span>
       </button>
       <div class="collapse navbar-collapse text-right" id="navbarNav">
-        <ul class="navbar-nav ml-auto flex-nowrap">
+        <ul class="navbar-nav ml-auto flex-nowrap {% if page.title == 'About' %}about-tabs-align{% endif %}">
           <!-- About -->
-          <li class="nav-item {% if page.title == 'about' %}active{% endif %}">
-            <a class="nav-link" href="{{ '/' | relative_url }}">
-              about
-              {% if page.title == "about" %}
+          <li class="nav-item {% if page.title == 'About' %}active{% endif %}">
+            <a class="nav-link" href="{{ '/#about' | relative_url }}">
+              About
+              {% if page.title == "About" %}
                 <span class="sr-only">(current)</span>
               {% endif %}
             </a>
@@ -43,8 +42,8 @@
           <!-- Blog -->
           <li class="nav-item {% if page.url contains 'blog' %}active{% endif %}">
             <a class="nav-link" href="{{ '/blog/' | relative_url }}">
-              blog
-              {% if page.title == "blog" %}
+              Blog
+              {% if page.title == "Blog" %}
               <span class="sr-only">(current)</span>
               {% endif %}
             </a>
@@ -53,9 +52,10 @@
           <!-- Other pages -->
           {% assign sorted_pages = site.pages | sort: "title" %}
           {% for p in sorted_pages %}
-          {% if p.nav and p.autogen == nil %}
+          {% if p.nav and p.autogen == nil and p.title != 'CV' %}
           <li class="nav-item {% if page.title == p.title %}active{% endif %}">
-              <a class="nav-link" href="{{ p.url | relative_url }}">
+              {% assign nav_target = p.nav_url | default: p.url %}
+              <a class="nav-link" href="{{ nav_target | relative_url }}">
                 {{ p.title }}
                 {% if page.title == p.title %}
                 <span class="sr-only">(current)</span>
@@ -64,6 +64,24 @@
           </li>
           {% endif %}
           {% endfor %}
+          {% for p in sorted_pages %}
+          {% if p.nav and p.autogen == nil and p.title == 'CV' %}
+          <li class="nav-item {% if page.title == p.title %}active{% endif %}">
+              {% assign nav_target = p.nav_url | default: p.url %}
+              <a class="nav-link" href="{{ nav_target | relative_url }}">
+                {{ p.title }}
+                {% if page.title == p.title %}
+                <span class="sr-only">(current)</span>
+                {% endif %}
+              </a>
+          </li>
+          {% endif %}
+          {% endfor %}
+          <li class="nav-item">
+            <button id="theme-toggle" class="nav-link theme-toggle-btn" type="button" aria-label="Switch to dark mode" title="Toggle color mode">
+              <i class="fas fa-moon" aria-hidden="true"></i>
+            </button>
+          </li>
         </ul>
       </div>
     </div>

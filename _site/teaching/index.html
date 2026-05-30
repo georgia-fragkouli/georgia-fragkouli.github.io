@@ -5,9 +5,18 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script>
+	(function() {
+		try {
+			if (localStorage.getItem('site-theme') === 'dark') {
+				document.documentElement.classList.add('dark-mode');
+			}
+		} catch (e) {}
+	})();
+</script>
 
-<title>Aunn raza | teaching</title>
-<meta name="description" content="Aunn Raza homepage
+<title>Georgia Fragkouli | Teaching</title>
+<meta name="description" content="Georgia's homepage
 ">
 
 <!-- Bootstrap & MDB -->
@@ -20,7 +29,8 @@
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
 
 <!-- Styles -->
-<link rel="shortcut icon" href="/assets/img/favicon.ico">
+<link rel="icon" href="data:,">
+<link rel="shortcut icon" href="data:,">
 <link rel="stylesheet" href="/assets/css/main.css">
 
 <link rel="canonical" href="/teaching/">
@@ -37,15 +47,14 @@
     <header>
 
     <!-- Nav Bar -->
-    <nav id="navbar" class="navbar navbar-light bg-white navbar-expand-sm fixed-top">
+    <nav id="navbar" data-page-title="Teaching" class="navbar navbar-light bg-white navbar-expand-sm fixed-top">
     <div class="container">
       
       
       
       
-      
-      <a class="navbar-brand title font-weight-lighter" href="http://localhost:4000/">
-       <span class="font-weight-bold">Aunn</span>   raza
+      <a id="navbar-name" class="navbar-brand title font-weight-lighter " href="http://localhost:4000/">
+        Georgia  Fragkouli
       </a>
       
       <!-- Navbar Toogle -->
@@ -56,11 +65,11 @@
         <span class="icon-bar bottom-bar"></span>
       </button>
       <div class="collapse navbar-collapse text-right" id="navbarNav">
-        <ul class="navbar-nav ml-auto flex-nowrap">
+        <ul class="navbar-nav ml-auto flex-nowrap ">
           <!-- About -->
           <li class="nav-item ">
-            <a class="nav-link" href="/">
-              about
+            <a class="nav-link" href="/#about">
+              About
               
             </a>
           </li>
@@ -81,9 +90,12 @@
           
           
           
+          
+          
           <li class="nav-item ">
-              <a class="nav-link" href="/publications/">
-                publications
+              
+              <a class="nav-link" href="/#publications">
+                Publications
                 
               </a>
           </li>
@@ -91,8 +103,9 @@
           
           
           <li class="nav-item active">
-              <a class="nav-link" href="/teaching/">
-                teaching
+              
+              <a class="nav-link" href="/#teaching">
+                Teaching
                 
                 <span class="sr-only">(current)</span>
                 
@@ -100,6 +113,38 @@
           </li>
           
           
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="nav-item ">
+              
+              <a class="nav-link" href="/assets/pdf/cv_georgia_fragkouli.pdf">
+                CV
+                
+              </a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="nav-item">
+            <button id="theme-toggle" class="nav-link theme-toggle-btn" type="button" aria-label="Switch to dark mode" title="Toggle color mode">
+              <i class="fas fa-moon" aria-hidden="true"></i>
+            </button>
+          </li>
         </ul>
       </div>
     </div>
@@ -114,8 +159,8 @@
       <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">teaching</h1>
-    <p class="post-description">Teaching and related experiences.</p>
+    <h1 class="post-title">Teaching</h1>
+    <p class="post-description"></p>
   </header>
 
   <article>
@@ -123,35 +168,75 @@
 
 Organize your courses by years, topics, or universities, however you like! -->
 
-<h2 id="teaching-assitant-at-epfl"><strong>Teaching Assitant at EPFL</strong></h2>
+<!-- ## __courses__ -->
+
+<h3 id="ethz"><strong>ETHZ</strong></h3>
 
 <ul>
-  <li><strong>COM208 - Computer Networks</strong>
-    <ul>
-      <li>Fall 2021</li>
-      <li>Fall 2020</li>
-      <li>Fall 2019</li>
-      <li>Fall 2018</li>
-      <li>Fall 2017</li>
-    </ul>
+  <li>
+    <p><strong>227-0559-10L - Seminar in Computer Networks</strong><br />
+Spring 2025, 2026<br />
+Lecturers: Laurent Vanbever, Georgia Fragkouli</p>
   </li>
-  <li><strong>CS322 - Introduction to Database Systems</strong>
-    <ul>
-      <li>Spring 2021</li>
-      <li>Spring 2020</li>
-    </ul>
+  <li>
+    <p><strong>227-0120-00L - Communication Networks</strong><br />
+Spring 2023, 2024, 2025, 2026<br />
+Lecturer: Laurent Vanbever</p>
+  </li>
+  <li>
+    <p><strong>227-0575-00L - Advanced Topics in Communication Networks</strong><br />
+Fall 2023, 2024<br />
+Lecturer: Laurent Vanbever</p>
   </li>
 </ul>
 
-<h2 id="teaching-assitant-at-ntua"><strong>Teaching Assitant at NTUA</strong></h2>
+<div class="teaching-subsection-gap" aria-hidden="true"></div>
+
+<h3 id="epfl"><strong>EPFL</strong></h3>
 
 <ul>
-  <li><strong>3.4.01.1 - Introduction to Computer Programming</strong>
-    <ul>
-      <li>Fall 2011</li>
-    </ul>
+  <li>
+    <p><strong>CS322 - Introduction to Database Systems</strong><br />
+Spring 2020, 2021<br />
+Lecturers: Anastasia Ailamaki, Christoph Koch</p>
+  </li>
+  <li>
+    <p><strong>COM208 - Computer Networks</strong><br />
+Fall 2017, 2018, 2019, 2020, 2021<br />
+Lecturer: Katerina Argyraki</p>
   </li>
 </ul>
+
+<div class="teaching-subsection-gap" aria-hidden="true"></div>
+
+<h3 id="ntua"><strong>NTUA</strong></h3>
+
+<ul>
+  <li><strong>3.4.01.1 - Introduction to Computer Programming</strong><br />
+Fall 2011<br />
+Lecturers: Stathis Zachos, Nikolaos Papaspyrou, Dimitris Fotakis</li>
+</ul>
+
+<!-- ## __supervised students__
+
+### __graduate__
+
+- [Sascha Bongni](https://scholar.google.com/citations?user=ZAbNS-IAAAAJ&hl=de)
+- [Wilton Arthur Poth](https://warp.mov/en/)
+- Kah Leong Chan
+- Yu Song
+- [Roland Schmid](https://nsg.ee.ethz.ch/people/roland-schmid/)
+- Xinge Xie
+- [Clemens Klopfstein](https://netfabric.ai/team/)
+- Arlette Houndji
+- Peiyu Zeng
+- Hande Harputluoglu
+- Alexander De Battista Kvamme
+- Farida Yousri Aclimandos
+
+### __undergraduate__
+
+- Nick Tuninga -->
 
 
   </article>
@@ -165,10 +250,10 @@ Organize your courses by years, topics, or universities, however you like! -->
     
 <footer class="fixed-bottom">
   <div class="container mt-0" style="text-align: center;">
-    &copy; Copyright 2021 Aunn raza.
+    &copy; Copyright 2026 Georgia Fragkouli.
     
     
-    Last updated: December 01, 2021.
+    Last updated: May 30, 2026.
     
   </div>
 </footer>

@@ -5,9 +5,18 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script>
+	(function() {
+		try {
+			if (localStorage.getItem('site-theme') === 'dark') {
+				document.documentElement.classList.add('dark-mode');
+			}
+		} catch (e) {}
+	})();
+</script>
 
-<title>Aunn raza | publications</title>
-<meta name="description" content="Aunn Raza homepage
+<title>Georgia Fragkouli | Publications</title>
+<meta name="description" content="Georgia's homepage
 ">
 
 <!-- Bootstrap & MDB -->
@@ -20,7 +29,8 @@
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
 
 <!-- Styles -->
-<link rel="shortcut icon" href="/assets/img/favicon.ico">
+<link rel="icon" href="data:,">
+<link rel="shortcut icon" href="data:,">
 <link rel="stylesheet" href="/assets/css/main.css">
 
 <link rel="canonical" href="/publications/">
@@ -37,15 +47,14 @@
     <header>
 
     <!-- Nav Bar -->
-    <nav id="navbar" class="navbar navbar-light bg-white navbar-expand-sm fixed-top">
+    <nav id="navbar" data-page-title="Publications" class="navbar navbar-light bg-white navbar-expand-sm fixed-top">
     <div class="container">
       
       
       
       
-      
-      <a class="navbar-brand title font-weight-lighter" href="http://localhost:4000/">
-       <span class="font-weight-bold">Aunn</span>   raza
+      <a id="navbar-name" class="navbar-brand title font-weight-lighter " href="http://localhost:4000/">
+        Georgia  Fragkouli
       </a>
       
       <!-- Navbar Toogle -->
@@ -56,11 +65,11 @@
         <span class="icon-bar bottom-bar"></span>
       </button>
       <div class="collapse navbar-collapse text-right" id="navbarNav">
-        <ul class="navbar-nav ml-auto flex-nowrap">
+        <ul class="navbar-nav ml-auto flex-nowrap ">
           <!-- About -->
           <li class="nav-item ">
-            <a class="nav-link" href="/">
-              about
+            <a class="nav-link" href="/#about">
+              About
               
             </a>
           </li>
@@ -81,9 +90,12 @@
           
           
           
+          
+          
           <li class="nav-item active">
-              <a class="nav-link" href="/publications/">
-                publications
+              
+              <a class="nav-link" href="/#publications">
+                Publications
                 
                 <span class="sr-only">(current)</span>
                 
@@ -93,13 +105,46 @@
           
           
           <li class="nav-item ">
-              <a class="nav-link" href="/teaching/">
-                teaching
+              
+              <a class="nav-link" href="/#teaching">
+                Teaching
                 
               </a>
           </li>
           
           
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="nav-item ">
+              
+              <a class="nav-link" href="/assets/pdf/cv_georgia_fragkouli.pdf">
+                CV
+                
+              </a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="nav-item">
+            <button id="theme-toggle" class="nav-link theme-toggle-btn" type="button" aria-label="Switch to dark mode" title="Toggle color mode">
+              <i class="fas fa-moon" aria-hidden="true"></i>
+            </button>
+          </li>
         </ul>
       </div>
     </div>
@@ -114,86 +159,63 @@
       <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">publications</h1>
-    <p class="post-description">More frequently updated publications can be found at <a href="https://scholar.google.com/citations?user=opYjaesAAAAJ&hl" target="_blank">Google Scholar</a>.<br/><br/>Following publications by categories in reversed chronological order.</p>
+    <h1 class="post-title">Publications</h1>
+    <p class="post-description"></p>
   </header>
 
   <article>
     <div class="publications">
 
-
-  <h2 class="year">2019</h2>
-  <ol class="bibliography"><li><div class="row">
-  <div class="col-sm-2 abbr">
-  
-    <abbr class="badge inproceedings">inproceedings</abbr>
-  
+<h2 class="bibliography">2026</h2>
+<ol class="bibliography"><li><div id="FragkouliV26uRDMA" class="publication-entry">
     
-  
-  </div>
-
-  <div id="DBLP:conf/hotos/AlpKFF19" class="col-sm-8">
     
-      <span class="title">Rethinking General-Purpose Decentralized Computing</span>
-      <span class="author">
-        
-          
-            
-              
-                
-                  Alp, Enis Ceyhun,
-                
-              
-            
-          
-        
-          
-            
-              
-                
-                  Kokoris-Kogias, Eleftherios,
-                
-              
-            
-          
-        
-          
-            
-              
-                
-                  Fragkouli, Georgia,
-                
-              
-            
-          
-        
-          
-            
-              
-                
-                  and Ford, Bryan
-                
-              
-            
-          
-        
-      </span>
 
-      <span class="periodical">
-      
-        <em>In Proceedings of the Workshop on Hot Topics in Operating Systems, HotOS
-               2019, Bertinoro, Italy, May 13-15, 2019</em>
-      
-      
-        2019
-      
-      </span>
     
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    <div class="publication-title-row">
+      <strong class="publication-title">uRDMA: Faster RDMA by Partially Unloading NIC Tasks Back to the CPU</strong>
+      
+    </div>
+    <span class="author">
+      
+        
+        
+          
+            
+              <strong class="self-author">Georgia Fragkouli</strong>,
+            
+          
+        
+      
+        
+        
+          
+            
+              Laurent Vanbever
+            
+          
+        
+      
+    </span>
+
+    <span class="periodical">
+    
+      Under Preparation
+    
+    </span>
 
     <span class="links">
-    
-    
-    
     
     
     
@@ -203,69 +225,84 @@
 
     <!-- Hidden abstract block -->
     
-  </div>
 </div>
 </li>
-<li><div class="row">
-  <div class="col-sm-2 abbr">
-  
-    <abbr class="badge article">article</abbr>
-  
+<li><div id="FragkouliNTVA26Transparency" class="publication-entry">
     
-  
-  </div>
+    
 
-  <div id="DBLP:journals/popets/FragkouliAF19" class="col-sm-8">
     
-      <span class="title">MorphIT: Morphing Packet Reports for Internet Transparency</span>
-      <span class="author">
-        
-          
-            
-              
-                
-                  Fragkouli, Georgia,
-                
-              
-            
-          
-        
-          
-            
-              
-                
-                  Argyraki, Katerina J.,
-                
-              
-            
-          
-        
-          
-            
-              
-                
-                  and Ford, Bryan
-                
-              
-            
-          
-        
-      </span>
+    
 
-      <span class="periodical">
-      
-        <em>Proc. Priv. Enhancing Technol.</em>
-      
-      
-        2019
-      
-      </span>
     
+    
+
+    
+    
+
+    
+    
+
+    <div class="publication-title-row">
+      <strong class="publication-title">Toward Internet Performance Transparency</strong>
+      
+    </div>
+    <span class="author">
+      
+        
+        
+          
+            
+              <strong class="self-author">Georgia Fragkouli</strong>,
+            
+          
+        
+      
+        
+        
+          
+            
+              Pavlos Nikolopoulos,
+            
+          
+        
+      
+        
+        
+          
+            
+              Muoi Tran,
+            
+          
+        
+      
+        
+        
+          
+            
+              Laurent Vanbever,
+            
+          
+        
+      
+        
+        
+          
+            
+              Katerina Argyraki
+            
+          
+        
+      
+    </span>
+
+    <span class="periodical">
+    
+      Under Preparation
+    
+    </span>
 
     <span class="links">
-    
-    
-    
     
     
     
@@ -275,10 +312,948 @@
 
     <!-- Hidden abstract block -->
     
-  </div>
+</div>
+</li>
+<li><div id="BasescuFANFBCEB26Limix" class="publication-entry">
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    <div class="publication-title-row">
+      <strong class="publication-title">Limix: Limiting Lamport Exposure to Distant Failures in Globally-Managed Distributed Systems</strong>
+      
+      <div class="publication-actions">
+        
+        <a class="publication-pdf-link" href="https://doi.org/10.4230/OASIcs.NINeS.2026.3" target="_blank" aria-label="Open publication paper">
+          <i class="far fa-file-alt" aria-hidden="true"></i>
+        </a>
+        
+        
+        
+        <a class="publication-talk-link" href="https://vimeo.com/showcase/NINeS?video=1161804036" target="_blank" aria-label="Open publication talk">
+          <svg class="publication-talk-icon" viewBox="116 308 728 536" aria-hidden="true">
+            <path d="M355 754 670 576 355 398v356zM180.309 843.999q-27.008.0-45.658-18.662-18.65-18.662-18.65-45.686V372.025q0-27.024 18.65-45.524t45.658-18.5h599.382q27.008.0 45.658 18.662t18.65 45.686v407.626q0 27.024-18.65 45.524t-45.658 18.5H180.309zm0-51.999h599.382q4.616.0 8.463-3.846 3.846-3.847 3.846-8.463V372.309q0-4.616-3.846-8.463-3.847-3.846-8.463-3.846H180.309q-4.616.0-8.463 3.846-3.846 3.847-3.846 8.463v407.382q0 4.616 3.846 8.463 3.847 3.846 8.463 3.846zM168 792V360 792z" />
+          </svg>
+        </a>
+        
+        
+        <a class="publication-code-link" href="https://github.com/dedis/limix" target="_blank" aria-label="Open publication code repository">
+          <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+        
+        
+      </div>
+      
+    </div>
+    <span class="author">
+      
+        
+        
+          
+            
+              Cristina Băsescu,
+            
+          
+        
+      
+        
+        
+          
+            
+              <strong class="self-author">Georgia Fragkouli</strong>,
+            
+          
+        
+      
+        
+        
+          
+            
+              Enis Ceyhun Alp,
+            
+          
+        
+      
+        
+        
+          
+            
+              Michael F. Nowlan,
+            
+          
+        
+      
+        
+        
+          
+            
+              Jose M. Faleiro,
+            
+          
+        
+      
+        
+        
+          
+            
+              Gaylor Bosson,
+            
+          
+        
+      
+        
+        
+          
+            
+              Kelong Cong,
+            
+          
+        
+      
+        
+        
+          
+            
+              Pierluca Borsò-Tan,
+            
+          
+        
+      
+        
+        
+          
+            
+              Vero Estrada-Galiñanes,
+            
+          
+        
+      
+        
+        
+          
+            
+              Bryan Ford
+            
+          
+        
+      
+    </span>
+
+    <span class="periodical">
+    
+      NINeS 2026
+    
+    </span>
+
+    <span class="links">
+    
+    
+    
+    
+    
+    </span>
+
+    <!-- Hidden abstract block -->
+    
 </div>
 </li></ol>
+<h2 class="bibliography">2025</h2>
+<ol class="bibliography"><li><div id="SchneiderSFV25Transient" class="publication-entry">
+    
+    
 
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    <div class="publication-title-row">
+      <strong class="publication-title">Transient Forwarding Anomalies and How to Find Them</strong>
+      
+      <div class="publication-actions">
+        
+        <a class="publication-pdf-link" href="https://dl.acm.org/doi/10.1145/3730973" target="_blank" aria-label="Open publication paper">
+          <i class="far fa-file-alt" aria-hidden="true"></i>
+        </a>
+        
+        
+        <a class="publication-slides-link" href="https://nsg.ee.ethz.ch/files/public/slides/2025-12-01-roschmi-conext-trix_1.pdf" target="_blank" aria-label="Open publication slides">
+          <svg class="publication-slides-icon" viewBox="0 96 960 960" aria-hidden="true">
+            <path d="M840 912V312H120v360H48V312q0-29.7 21.15-50.85Q90.3 240 120 240h720q29.7.0 50.85 21.15Q912 282.3 912 312v528q0 29-21.15 50.5T840 912zM336 672q-60 0-102-42t-42-102 42-102 102-42 102 42 42 102-42 102-102 42zm.212-72Q366 6e2 387 578.788q21-21.213 21-51Q408 498 386.788 477q-21.213-21-51-21Q306 456 285 477.212q-21 21.213-21 51Q264 558 285.212 579q21.213 21 51 21zM48 960v-92q0-26 12.5-47T95 786q54-33 115.691-49.5Q272.381 720 336 720q64 0 124.5 16.5T577 786q22 13 34.5 34.61T624 868v92H48zm72-72h432v-24q0-5.176-3.025-9.412Q545.95 850.353 541 848q-48-27-99.5-41.5T336 792t-106 14.5T131 848q-5 3-8 7.034-3 4.035-3 8.966v24zm216-360zm0 360z" />
+          </svg>
+        </a>
+        
+        
+        
+        <a class="publication-code-link" href="https://github.com/nsg-ethz/trix" target="_blank" aria-label="Open publication code repository">
+          <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+        
+        
+      </div>
+      
+    </div>
+    <span class="author">
+      
+        
+        
+          
+            
+              Roland Schmid,
+            
+          
+        
+      
+        
+        
+          
+            
+              Tibor Schneider,
+            
+          
+        
+      
+        
+        
+          
+            
+              <strong class="self-author">Georgia Fragkouli</strong>,
+            
+          
+        
+      
+        
+        
+          
+            
+              Laurent Vanbever
+            
+          
+        
+      
+    </span>
+
+    <span class="periodical">
+    
+      CoNEXT 2025
+    
+    </span>
+
+    <span class="links">
+    
+    
+    
+    
+    
+    </span>
+
+    <!-- Hidden abstract block -->
+    
+</div>
+</li>
+<li><div id="SchmidSFV25iBGP" class="publication-entry">
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    <div class="publication-title-row">
+      <strong class="publication-title">The Effects of iBGP Convergence</strong>
+      
+      <div class="publication-actions">
+        
+        <a class="publication-pdf-link" href="https://doi.org/10.48550/arXiv.2503.15249" target="_blank" aria-label="Open publication paper">
+          <i class="far fa-file-alt" aria-hidden="true"></i>
+        </a>
+        
+        
+        
+        
+        <a class="publication-code-link" href="https://github.com/nsg-ethz/router-lab" target="_blank" aria-label="Open publication code repository">
+          <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+        
+        
+      </div>
+      
+    </div>
+    <span class="author">
+      
+        
+        
+          
+            
+              Roland Schmid,
+            
+          
+        
+      
+        
+        
+          
+            
+              Tibor Schneider,
+            
+          
+        
+      
+        
+        
+          
+            
+              <strong class="self-author">Georgia Fragkouli</strong>,
+            
+          
+        
+      
+        
+        
+          
+            
+              Laurent Vanbever
+            
+          
+        
+      
+    </span>
+
+    <span class="periodical">
+    
+      arXiv 2025
+    
+    </span>
+
+    <span class="links">
+    
+    
+    
+    
+    
+    </span>
+
+    <!-- Hidden abstract block -->
+    
+</div>
+</li>
+<li><div id="FragkouliV25FasterOffloads" class="publication-entry">
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    <div class="publication-title-row">
+      <strong class="publication-title">Faster Offloads by Unloading them—The RDMA Case</strong>
+      
+      <div class="publication-actions">
+        
+        <a class="publication-pdf-link" href="https://arxiv.org/abs/2510.00735" target="_blank" aria-label="Open publication paper">
+          <i class="far fa-file-alt" aria-hidden="true"></i>
+        </a>
+        
+        
+        
+        
+        
+      </div>
+      
+    </div>
+    <span class="author">
+      
+        
+        
+          
+            
+              <strong class="self-author">Georgia Fragkouli</strong>,
+            
+          
+        
+      
+        
+        
+          
+            
+              Laurent Vanbever
+            
+          
+        
+      
+    </span>
+
+    <span class="periodical">
+    
+      arXiv 2025
+    
+    </span>
+
+    <span class="links">
+    
+    
+    
+    
+    
+    </span>
+
+    <!-- Hidden abstract block -->
+    
+</div>
+</li></ol>
+<h2 class="bibliography">2024</h2>
+<ol class="bibliography"><li><div id="HosseiniFNA24Consistency" class="publication-entry">
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    <div class="publication-title-row">
+      <strong class="publication-title">Flow/Path Performance Consistency</strong>
+      
+      <div class="publication-actions">
+        
+        <a class="publication-pdf-link" href="https://dl.acm.org/doi/10.1145/3696348.3696887" target="_blank" aria-label="Open publication paper">
+          <i class="far fa-file-alt" aria-hidden="true"></i>
+        </a>
+        
+        
+        
+        
+        
+      </div>
+      
+    </div>
+    <span class="author">
+      
+        
+        
+          
+            
+              Mahdi Hosseini,
+            
+          
+        
+      
+        
+        
+          
+            
+              <strong class="self-author">Georgia Fragkouli</strong>,
+            
+          
+        
+      
+        
+        
+          
+            
+              Pavlos Nikolopoulos,
+            
+          
+        
+      
+        
+        
+          
+            
+              Katerina Argyraki
+            
+          
+        
+      
+    </span>
+
+    <span class="periodical">
+    
+      HotNets 2024
+    
+    </span>
+
+    <span class="links">
+    
+    
+    
+    
+    
+    </span>
+
+    <!-- Hidden abstract block -->
+    
+</div>
+</li></ol>
+<h2 class="bibliography">2023</h2>
+<ol class="bibliography"><li><div id="DietmullerFV23Learning" class="publication-entry">
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    <div class="publication-title-row">
+      <strong class="publication-title">Learning Distributions to Detect Anomalies Using All the Network Traffic</strong>
+      
+      <div class="publication-actions">
+        
+        <a class="publication-pdf-link" href="https://dl.acm.org/doi/10.1145/3603269.3610837" target="_blank" aria-label="Open publication paper">
+          <i class="far fa-file-alt" aria-hidden="true"></i>
+        </a>
+        
+        
+        
+        
+        
+        <a class="publication-poster-link" href="https://www.research-collection.ethz.ch/entities/publication/066fd511-c012-4f70-8250-3092a7000bb0" target="_blank" aria-label="Open publication poster">
+          <i class="far fa-image" aria-hidden="true"></i>
+        </a>
+        
+      </div>
+      
+    </div>
+    <span class="author">
+      
+        
+        
+          
+            
+              Alexander Dietmüller,
+            
+          
+        
+      
+        
+        
+          
+            
+              <strong class="self-author">Georgia Fragkouli</strong>,
+            
+          
+        
+      
+        
+        
+          
+            
+              Laurent Vanbever
+            
+          
+        
+      
+    </span>
+
+    <span class="periodical">
+    
+      SIGCOMM Posters 2023
+    
+    </span>
+
+    <span class="links">
+    
+    
+    
+    
+    
+    </span>
+
+    <!-- Hidden abstract block -->
+    
+</div>
+</li>
+<li><div id="SchmidSFV23BGP" class="publication-entry">
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    <div class="publication-title-row">
+      <strong class="publication-title">Predicting Specification Violations During BGP Convergence</strong>
+      
+      <div class="publication-actions">
+        
+        <a class="publication-pdf-link" href="https://dl.acm.org/doi/10.1145/3630202.3630235" target="_blank" aria-label="Open publication paper">
+          <i class="far fa-file-alt" aria-hidden="true"></i>
+        </a>
+        
+        
+        <a class="publication-slides-link" href="https://nsg.ee.ethz.ch/files/public/slides/2023-12-08-bgpseer-conext-sw_1.pdf" target="_blank" aria-label="Open publication slides">
+          <svg class="publication-slides-icon" viewBox="0 96 960 960" aria-hidden="true">
+            <path d="M840 912V312H120v360H48V312q0-29.7 21.15-50.85Q90.3 240 120 240h720q29.7.0 50.85 21.15Q912 282.3 912 312v528q0 29-21.15 50.5T840 912zM336 672q-60 0-102-42t-42-102 42-102 102-42 102 42 42 102-42 102-102 42zm.212-72Q366 6e2 387 578.788q21-21.213 21-51Q408 498 386.788 477q-21.213-21-51-21Q306 456 285 477.212q-21 21.213-21 51Q264 558 285.212 579q21.213 21 51 21zM48 960v-92q0-26 12.5-47T95 786q54-33 115.691-49.5Q272.381 720 336 720q64 0 124.5 16.5T577 786q22 13 34.5 34.61T624 868v92H48zm72-72h432v-24q0-5.176-3.025-9.412Q545.95 850.353 541 848q-48-27-99.5-41.5T336 792t-106 14.5T131 848q-5 3-8 7.034-3 4.035-3 8.966v24zm216-360zm0 360z" />
+          </svg>
+        </a>
+        
+        
+        
+        
+      </div>
+      
+    </div>
+    <span class="author">
+      
+        
+        
+          
+            
+              Roland Schmid,
+            
+          
+        
+      
+        
+        
+          
+            
+              Tibor Schneider,
+            
+          
+        
+      
+        
+        
+          
+            
+              <strong class="self-author">Georgia Fragkouli</strong>,
+            
+          
+        
+      
+        
+        
+          
+            
+              Laurent Vanbever
+            
+          
+        
+      
+    </span>
+
+    <span class="periodical">
+    
+      CoNEXT Student Workshop 2023
+    
+    </span>
+
+    <span class="links">
+    
+    
+    
+    
+    
+    </span>
+
+    <!-- Hidden abstract block -->
+    
+</div>
+</li></ol>
+<h2 class="bibliography">2022</h2>
+<ol class="bibliography"><li><div id="Fragkouli22Thesis" class="publication-entry">
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    <div class="publication-title-row">
+      <strong class="publication-title">Toward Internet Performance Transparency</strong>
+      
+      <div class="publication-actions">
+        
+        <a class="publication-pdf-link" href="https://infoscience.epfl.ch/handle/20.500.14299/190431" target="_blank" aria-label="Open publication paper">
+          <i class="far fa-file-alt" aria-hidden="true"></i>
+        </a>
+        
+        
+        <a class="publication-slides-link" href="https://bford.info/thesis/2022-fragkouli/private-defense.pdf" target="_blank" aria-label="Open publication slides">
+          <svg class="publication-slides-icon" viewBox="0 96 960 960" aria-hidden="true">
+            <path d="M840 912V312H120v360H48V312q0-29.7 21.15-50.85Q90.3 240 120 240h720q29.7.0 50.85 21.15Q912 282.3 912 312v528q0 29-21.15 50.5T840 912zM336 672q-60 0-102-42t-42-102 42-102 102-42 102 42 42 102-42 102-102 42zm.212-72Q366 6e2 387 578.788q21-21.213 21-51Q408 498 386.788 477q-21.213-21-51-21Q306 456 285 477.212q-21 21.213-21 51Q264 558 285.212 579q21.213 21 51 21zM48 960v-92q0-26 12.5-47T95 786q54-33 115.691-49.5Q272.381 720 336 720q64 0 124.5 16.5T577 786q22 13 34.5 34.61T624 868v92H48zm72-72h432v-24q0-5.176-3.025-9.412Q545.95 850.353 541 848q-48-27-99.5-41.5T336 792t-106 14.5T131 848q-5 3-8 7.034-3 4.035-3 8.966v24zm216-360zm0 360z" />
+          </svg>
+        </a>
+        
+        
+        
+        
+      </div>
+      
+    </div>
+    <span class="author">
+      
+        
+        
+          
+            <strong class="self-author">Georgia Fragkouli</strong>
+          
+        
+      
+    </span>
+
+    <span class="periodical">
+    
+      EPFL PhD THESIS 2022
+    
+    </span>
+
+    <span class="links">
+    
+    
+    
+    
+    
+    </span>
+
+    <!-- Hidden abstract block -->
+    
+</div>
+</li></ol>
+<h2 class="bibliography">2019</h2>
+<ol class="bibliography"><li><div id="DBLP:journals/popets/FragkouliAF19" class="publication-entry">
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    <div class="publication-title-row">
+      <strong class="publication-title">MorphIT: Morphing Packet Reports for Internet Transparency</strong>
+      
+      <div class="publication-actions">
+        
+        <a class="publication-pdf-link" href="https://doi.org/10.2478/popets-2019-0021" target="_blank" aria-label="Open publication paper">
+          <i class="far fa-file-alt" aria-hidden="true"></i>
+        </a>
+        
+        
+        
+        
+        
+      </div>
+      
+    </div>
+    <span class="author">
+      
+        
+        
+          
+            
+              <strong class="self-author">Georgia Fragkouli</strong>,
+            
+          
+        
+      
+        
+        
+          
+            
+              Katerina Argyraki,
+            
+          
+        
+      
+        
+        
+          
+            
+              Bryan Ford
+            
+          
+        
+      
+    </span>
+
+    <span class="periodical">
+    
+      PETS 2019
+    
+    </span>
+
+    <span class="links">
+    
+    
+    
+    
+    
+    </span>
+
+    <!-- Hidden abstract block -->
+    
+</div>
+</li>
+<li><div id="DBLP:conf/hotos/AlpKFF19" class="publication-entry">
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    <div class="publication-title-row">
+      <strong class="publication-title">Rethinking General-Purpose Decentralized Computing</strong>
+      
+      <div class="publication-actions">
+        
+        <a class="publication-pdf-link" href="https://doi.org/10.1145/3317550.3321448" target="_blank" aria-label="Open publication paper">
+          <i class="far fa-file-alt" aria-hidden="true"></i>
+        </a>
+        
+        
+        <a class="publication-slides-link" href="https://bford.info/pub/os/protean-slides.pdf" target="_blank" aria-label="Open publication slides">
+          <svg class="publication-slides-icon" viewBox="0 96 960 960" aria-hidden="true">
+            <path d="M840 912V312H120v360H48V312q0-29.7 21.15-50.85Q90.3 240 120 240h720q29.7.0 50.85 21.15Q912 282.3 912 312v528q0 29-21.15 50.5T840 912zM336 672q-60 0-102-42t-42-102 42-102 102-42 102 42 42 102-42 102-102 42zm.212-72Q366 6e2 387 578.788q21-21.213 21-51Q408 498 386.788 477q-21.213-21-51-21Q306 456 285 477.212q-21 21.213-21 51Q264 558 285.212 579q21.213 21 51 21zM48 960v-92q0-26 12.5-47T95 786q54-33 115.691-49.5Q272.381 720 336 720q64 0 124.5 16.5T577 786q22 13 34.5 34.61T624 868v92H48zm72-72h432v-24q0-5.176-3.025-9.412Q545.95 850.353 541 848q-48-27-99.5-41.5T336 792t-106 14.5T131 848q-5 3-8 7.034-3 4.035-3 8.966v24zm216-360zm0 360z" />
+          </svg>
+        </a>
+        
+        
+        
+        
+      </div>
+      
+    </div>
+    <span class="author">
+      
+        
+        
+          
+            
+              Enis Ceyhun Alp,
+            
+          
+        
+      
+        
+        
+          
+            
+              Eleftherios Kokoris-Kogias,
+            
+          
+        
+      
+        
+        
+          
+            
+              <strong class="self-author">Georgia Fragkouli</strong>,
+            
+          
+        
+      
+        
+        
+          
+            
+              Bryan Ford
+            
+          
+        
+      
+    </span>
+
+    <span class="periodical">
+    
+      HotOS 2019
+    
+    </span>
+
+    <span class="links">
+    
+    
+    
+    
+    
+    </span>
+
+    <!-- Hidden abstract block -->
+    
+</div>
+</li></ol>
 
 </div>
 
@@ -293,10 +1268,10 @@
     
 <footer class="fixed-bottom">
   <div class="container mt-0" style="text-align: center;">
-    &copy; Copyright 2021 Aunn raza.
+    &copy; Copyright 2026 Georgia Fragkouli.
     
     
-    Last updated: December 01, 2021.
+    Last updated: May 30, 2026.
     
   </div>
 </footer>

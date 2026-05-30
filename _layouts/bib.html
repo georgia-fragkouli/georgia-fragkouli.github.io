@@ -1,71 +1,134 @@
 ---
 ---
 
-<div class="row">
-  <div class="col-sm-2 abbr">
-  {% if entry.type %}
-    <abbr class="badge {{entry.type}}">{{entry.type}}</abbr>
-  {% endif %}
-    
-  {% if entry.abbr %}
-    {% if site.data.venues[entry.abbr] %}
-    <abbr class="badge"><a href="{{site.data.venues[entry.abbr].url}}" target="_blank">{{entry.abbr}}</a></abbr>
-    {% else %}
-    <abbr class="badge">{{entry.abbr}}</abbr>
+<div id="{{entry.key}}" class="publication-entry">
+    {% assign publication_pdf_link = nil %}
+    {% if entry.pdf %}
+      {% assign publication_pdf_link = entry.pdf | prepend: '/assets/pdf/' | relative_url %}
+    {% elsif entry.url %}
+      {% assign publication_pdf_link = entry.url %}
+    {% elsif entry.doi %}
+      {% assign publication_pdf_link = entry.doi | prepend: 'https://doi.org/' %}
+    {% elsif entry.arxiv %}
+      {% assign publication_pdf_link = entry.arxiv | prepend: 'https://arxiv.org/abs/' %}
     {% endif %}
-  {% endif %}
-  </div>
 
-  <div id="{{entry.key}}" class="col-sm-8">
-    {% if entry.type == "thesis" %}
-      {{reference}}
-    {% else %}
-      <span class="title">{{entry.title}}</span>
-      <span class="author">
-        {% for author in entry.author_array %}
-          {% if forloop.length == 1 %}
+    {% assign publication_slides_link = nil %}
+    {% if entry.slides %}
+      {% if entry.slides contains '://' %}
+        {% assign publication_slides_link = entry.slides %}
+      {% else %}
+        {% assign publication_slides_link = entry.slides | prepend: '/assets/pdf/' | relative_url %}
+      {% endif %}
+    {% endif %}
+
+    {% assign publication_code_link = nil %}
+    {% if entry.code %}
+      {% assign publication_code_link = entry.code %}
+    {% endif %}
+
+    {% assign publication_poster_link = nil %}
+    {% if entry.poster %}
+      {% if entry.poster contains '://' %}
+        {% assign publication_poster_link = entry.poster %}
+      {% else %}
+        {% assign publication_poster_link = entry.poster | prepend: '/assets/pdf/' | relative_url %}
+      {% endif %}
+    {% endif %}
+
+    {% assign publication_talk_link = nil %}
+    {% if entry.talk %}
+      {% if entry.talk contains '://' %}
+        {% assign publication_talk_link = entry.talk %}
+      {% else %}
+        {% assign publication_talk_link = entry.talk | prepend: '/assets/pdf/' | relative_url %}
+      {% endif %}
+    {% endif %}
+
+    <div class="publication-title-row">
+      <strong class="publication-title">{{entry.title}}</strong>
+      {% if publication_pdf_link or publication_slides_link or publication_code_link or publication_poster_link or publication_talk_link %}
+      <div class="publication-actions">
+        {% if publication_pdf_link %}
+        <a class="publication-pdf-link" href="{{ publication_pdf_link }}" target="_blank" aria-label="Open publication paper">
+          <i class="far fa-file-alt" aria-hidden="true"></i>
+        </a>
+        {% endif %}
+        {% if publication_slides_link %}
+        <a class="publication-slides-link" href="{{ publication_slides_link }}" target="_blank" aria-label="Open publication slides">
+          <svg class="publication-slides-icon" viewBox="0 96 960 960" aria-hidden="true">
+            <path d="M840 912V312H120v360H48V312q0-29.7 21.15-50.85Q90.3 240 120 240h720q29.7.0 50.85 21.15Q912 282.3 912 312v528q0 29-21.15 50.5T840 912zM336 672q-60 0-102-42t-42-102 42-102 102-42 102 42 42 102-42 102-102 42zm.212-72Q366 6e2 387 578.788q21-21.213 21-51Q408 498 386.788 477q-21.213-21-51-21Q306 456 285 477.212q-21 21.213-21 51Q264 558 285.212 579q21.213 21 51 21zM48 960v-92q0-26 12.5-47T95 786q54-33 115.691-49.5Q272.381 720 336 720q64 0 124.5 16.5T577 786q22 13 34.5 34.61T624 868v92H48zm72-72h432v-24q0-5.176-3.025-9.412Q545.95 850.353 541 848q-48-27-99.5-41.5T336 792t-106 14.5T131 848q-5 3-8 7.034-3 4.035-3 8.966v24zm216-360zm0 360z" />
+          </svg>
+        </a>
+        {% endif %}
+        {% if publication_talk_link %}
+        <a class="publication-talk-link" href="{{ publication_talk_link }}" target="_blank" aria-label="Open publication talk">
+          <svg class="publication-talk-icon" viewBox="116 308 728 536" aria-hidden="true">
+            <path d="M355 754 670 576 355 398v356zM180.309 843.999q-27.008.0-45.658-18.662-18.65-18.662-18.65-45.686V372.025q0-27.024 18.65-45.524t45.658-18.5h599.382q27.008.0 45.658 18.662t18.65 45.686v407.626q0 27.024-18.65 45.524t-45.658 18.5H180.309zm0-51.999h599.382q4.616.0 8.463-3.846 3.846-3.847 3.846-8.463V372.309q0-4.616-3.846-8.463-3.847-3.846-8.463-3.846H180.309q-4.616.0-8.463 3.846-3.846 3.847-3.846 8.463v407.382q0 4.616 3.846 8.463 3.847 3.846 8.463 3.846zM168 792V360 792z" />
+          </svg>
+        </a>
+        {% endif %}
+        {% if publication_code_link %}
+        <a class="publication-code-link" href="{{ publication_code_link }}" target="_blank" aria-label="Open publication code repository">
+          <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+        {% endif %}
+        {% if publication_poster_link %}
+        <a class="publication-poster-link" href="{{ publication_poster_link }}" target="_blank" aria-label="Open publication poster">
+          <i class="far fa-image" aria-hidden="true"></i>
+        </a>
+        {% endif %}
+      </div>
+      {% endif %}
+    </div>
+    <span class="author">
+      {% for author in entry.author_array %}
+        {% capture author_name %}{{author.first}} {{author.last}}{% endcapture %}
+        {% if forloop.length == 1 %}
+          {% if author.last == site.scholar.last_name %}
+            <strong class="self-author">{{author_name}}</strong>
+          {% elsif site.data.coauthors[author.last] %}
+            <a href="{{site.data.coauthors[author.last].url}}" target="_blank">{{author_name}}</a>
+          {% else %}
+            {{author_name}}
+          {% endif %}
+        {% else %}
+          {% unless forloop.last %}
             {% if author.last == site.scholar.last_name %}
-              <em>{{author.last}}, {{author.first}}</em>
+              <strong class="self-author">{{author_name}}</strong>,
+            {% elsif site.data.coauthors[author.last] %}
+              <a href="{{site.data.coauthors[author.last].url}}" target="_blank">{{author_name}}</a>,
             {% else %}
-              {{author.last}}, {{author.first}}
+              {{author_name}},
             {% endif %}
           {% else %}
-            {% unless forloop.last %}
-              {% if author.last == site.scholar.last_name %}
-                <em>{{author.last}}, {{author.first}}</em>,
-              {% else %}
-                {% if site.data.coauthors[author.last] %}
-                  <a href="{{site.data.coauthors[author.last].url}}" target="_blank">{{author.last}}, {{author.first}}</a>,
-                {% else %}
-                  {{author.last}}, {{author.first}},
-                {% endif %}
-              {% endif %}
+            {% if author.last == site.scholar.last_name %}
+              <strong class="self-author">{{author_name}}</strong>
+            {% elsif site.data.coauthors[author.last] %}
+              <a href="{{site.data.coauthors[author.last].url}}" target="_blank">{{author_name}}</a>
             {% else %}
-              {% if author.last == site.scholar.last_name %}
-                and <em>{{author.last}}, {{author.first}}</em>
-              {% else %}
-                {% if site.data.coauthors[author.last] %}
-                  and <a href="{{site.data.coauthors[author.last].url}}" target="_blank">{{author.last}}, {{author.first}}</a>
-                {% else %}
-                  and {{author.last}}, {{author.first}}
-                {% endif %}
-              {% endif %}
-            {% endunless %}
-          {% endif %}
-        {% endfor %}
-      </span>
+              {{author_name}}
+            {% endif %}
+          {% endunless %}
+        {% endif %}
+      {% endfor %}
+    </span>
 
-      <span class="periodical">
-      {% if entry.type == "article" %}
-        <em>{{entry.journal}}</em>
-      {% elsif entry.type == "inproceedings" %}
-        <em>In {{entry.booktitle}}</em>
-      {% endif %}
-      {% if entry.year %}
-        {{entry.year}}
-      {% endif %}
-      </span>
+    <span class="periodical">
+    {% if entry.abbr %}
+      {{entry.abbr}}
+    {% elsif entry.type == "article" and entry.journal %}
+      {{entry.journal}}{% if entry.year %} {{entry.year}}{% endif %}
+    {% elsif entry.type == "inproceedings" and entry.booktitle %}
+      {{entry.booktitle}}{% if entry.year %} {{entry.year}}{% endif %}
+    {% elsif entry.type == "phdthesis" and entry.school %}
+      {{entry.school}}{% if entry.year %} {{entry.year}}{% endif %}
+    {% elsif entry.note %}
+      {{entry.note}}{% if entry.year %} {{entry.year}}{% endif %}
+    {% elsif entry.year %}
+      {{entry.year}}
     {% endif %}
+    </span>
 
     <span class="links">
     {% if entry.abstract %}
@@ -83,15 +146,6 @@
     {% if entry.supp %}
       [<a href="{{ entry.supp | prepend: '/assets/pdf/' | relative_url }}" target="_blank">Supp</a>]
     {% endif %}
-    {% if entry.poster %}
-      [<a href="{{ entry.poster | prepend: '/assets/pdf/' | relative_url }}" target="_blank">Poster</a>]
-    {% endif %}
-    {% if entry.slides %}
-      [<a href="{{ entry.slides | prepend: '/assets/pdf/' | relative_url }}" target="_blank">Slides</a>]
-    {% endif %}
-    {% if entry.code %}
-      [<a href="{{ entry.code }}" target="_blank">Code</a>]
-    {% endif %}
     </span>
 
     <!-- Hidden abstract block -->
@@ -100,5 +154,4 @@
       <p>{{ entry.abstract }}</p>
     </span>
     {% endif %}
-  </div>
 </div>

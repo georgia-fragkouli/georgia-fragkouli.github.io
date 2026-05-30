@@ -1,6 +1,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script>
+	(function() {
+		try {
+			if (localStorage.getItem('site-theme') === 'dark') {
+				document.documentElement.classList.add('dark-mode');
+			}
+		} catch (e) {}
+	})();
+</script>
 
 <title>{{ site.title }}{% if page.title and page.url != "/" %} | {{ page.title }}{% endif %}</title>
 <meta name="description" content="{{ site.description }}">
@@ -15,7 +24,8 @@
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
 
 <!-- Styles -->
-<link rel="shortcut icon" href="{{ '/assets/img/favicon.ico'  | relative_url }}">
+<link rel="icon" href="data:,">
+<link rel="shortcut icon" href="data:,">
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | relative_url }}">

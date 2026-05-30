@@ -5,9 +5,18 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script>
+	(function() {
+		try {
+			if (localStorage.getItem('site-theme') === 'dark') {
+				document.documentElement.classList.add('dark-mode');
+			}
+		} catch (e) {}
+	})();
+</script>
 
-<title>Aunn raza | a post with code</title>
-<meta name="description" content="Aunn Raza homepage
+<title>Georgia Fragkouli | a post with code</title>
+<meta name="description" content="Georgia's homepage
 ">
 
 <!-- Bootstrap & MDB -->
@@ -20,7 +29,8 @@
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
 
 <!-- Styles -->
-<link rel="shortcut icon" href="/assets/img/favicon.ico">
+<link rel="icon" href="data:,">
+<link rel="shortcut icon" href="data:,">
 <link rel="stylesheet" href="/assets/css/main.css">
 
 <link rel="canonical" href="/blog/2015/code/">
@@ -37,15 +47,14 @@
     <header>
 
     <!-- Nav Bar -->
-    <nav id="navbar" class="navbar navbar-light bg-white navbar-expand-sm fixed-top">
+    <nav id="navbar" data-page-title="a post with code" class="navbar navbar-light bg-white navbar-expand-sm fixed-top">
     <div class="container">
       
       
       
       
-      
-      <a class="navbar-brand title font-weight-lighter" href="http://localhost:4000/">
-       <span class="font-weight-bold">Aunn</span>   raza
+      <a id="navbar-name" class="navbar-brand title font-weight-lighter " href="http://localhost:4000/">
+        Georgia  Fragkouli
       </a>
       
       <!-- Navbar Toogle -->
@@ -56,11 +65,11 @@
         <span class="icon-bar bottom-bar"></span>
       </button>
       <div class="collapse navbar-collapse text-right" id="navbarNav">
-        <ul class="navbar-nav ml-auto flex-nowrap">
+        <ul class="navbar-nav ml-auto flex-nowrap ">
           <!-- About -->
           <li class="nav-item ">
-            <a class="nav-link" href="/">
-              about
+            <a class="nav-link" href="/#about">
+              About
               
             </a>
           </li>
@@ -81,9 +90,12 @@
           
           
           
+          
+          
           <li class="nav-item ">
-              <a class="nav-link" href="/publications/">
-                publications
+              
+              <a class="nav-link" href="/#publications">
+                Publications
                 
               </a>
           </li>
@@ -91,13 +103,46 @@
           
           
           <li class="nav-item ">
-              <a class="nav-link" href="/teaching/">
-                teaching
+              
+              <a class="nav-link" href="/#teaching">
+                Teaching
                 
               </a>
           </li>
           
           
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="nav-item ">
+              
+              <a class="nav-link" href="/assets/pdf/cv_georgia_fragkouli.pdf">
+                CV
+                
+              </a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="nav-item">
+            <button id="theme-toggle" class="nav-link theme-toggle-btn" type="button" aria-label="Switch to dark mode" title="Toggle color mode">
+              <i class="fas fa-moon" aria-hidden="true"></i>
+            </button>
+          </li>
         </ul>
       </div>
     </div>
@@ -179,10 +224,10 @@ Produces something like this:</p>
     
 <footer class="fixed-bottom">
   <div class="container mt-0" style="text-align: center;">
-    &copy; Copyright 2021 Aunn raza.
+    &copy; Copyright 2026 Georgia Fragkouli.
     
     
-    Last updated: December 01, 2021.
+    Last updated: May 30, 2026.
     
   </div>
 </footer>

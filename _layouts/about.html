@@ -13,14 +13,16 @@ layout: default
        {% assign middlenames = '' %}
     {% endif %}
     {% assign lastname = name | last %}
-    <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl | prepend: site.url }}/">
-     <span class="font-weight-bold">{{ firstname }}</span> {{ middlenames }}  {{ lastname }}
-    </a>
+    <h1 id="about" class="post-title">
+      <a class="about-name-link" href="{{ site.baseurl | prepend: site.url }}/">
+        {{ firstname }} {{ middlenames }} {{ lastname }}
+      </a>
+    </h1>
   </header>
 
   <article>
     <div class="row">
-      <div class="col" align="justify">
+      <div class="col about-content" align="justify">
         {{ content }}
       </div>
         {% if page.profile %}
