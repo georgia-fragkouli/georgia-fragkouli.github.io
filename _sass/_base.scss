@@ -97,6 +97,10 @@ a.about-name-link {
 }
 
 @media (min-width: 576px) {
+  .navbar-nav {
+    align-items: center;
+  }
+
   .about-tabs-align .theme-toggle-btn {
     margin-right: -10px;
   }
