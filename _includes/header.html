@@ -30,7 +30,7 @@
       <div class="collapse navbar-collapse text-right" id="navbarNav">
         <ul class="navbar-nav ml-auto flex-nowrap {% if page.title == 'About' %}about-tabs-align{% endif %}">
           <!-- About -->
-          <li class="nav-item {% if page.title == 'About' %}active{% endif %}">
+          <li class="nav-item {% if page.title == 'About' %}active{% endif %}" data-nav-section="about">
             <a class="nav-link" href="{{ '/#about' | relative_url }}">
               About
               {% if page.title == "About" %}
@@ -53,7 +53,7 @@
           {% assign sorted_pages = site.pages | sort: "title" %}
           {% for p in sorted_pages %}
           {% if p.nav and p.autogen == nil and p.title != 'CV' %}
-          <li class="nav-item {% if page.title == p.title %}active{% endif %}">
+          <li class="nav-item {% if page.title == p.title %}active{% endif %}"{% if p.nav_url contains '#' %} data-nav-section="{{ p.nav_url | split: '#' | last }}"{% endif %}>
               {% assign nav_target = p.nav_url | default: p.url %}
               <a class="nav-link" href="{{ nav_target | relative_url }}">
                 {{ p.title }}
@@ -66,7 +66,7 @@
           {% endfor %}
           {% for p in sorted_pages %}
           {% if p.nav and p.autogen == nil and p.title == 'CV' %}
-          <li class="nav-item {% if page.title == p.title %}active{% endif %}">
+          <li class="nav-item {% if page.title == p.title %}active{% endif %}"{% if p.nav_url contains '#' %} data-nav-section="{{ p.nav_url | split: '#' | last }}"{% endif %}>
               {% assign nav_target = p.nav_url | default: p.url %}
               <a class="nav-link" href="{{ nav_target | relative_url }}">
                 {{ p.title }}

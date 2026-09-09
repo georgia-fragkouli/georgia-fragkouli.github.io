@@ -32,6 +32,38 @@ $(document).ready(function() {
         }
     }
 
+    function updateActiveAboutTab() {
+        var $navbar = $('#navbar');
+        if (!$navbar.length || String($navbar.data('page-title') || '').toLowerCase() !== 'about') {
+            return;
+        }
+
+        var $sectionTabs = $navbar.find('[data-nav-section]');
+        var activeSection = 'about';
+        var scrollPosition = window.pageYOffset + $navbar.outerHeight() + 32;
+
+        $sectionTabs.each(function() {
+            var sectionId = $(this).data('nav-section');
+            var section = document.getElementById(sectionId);
+            if (section && section.offsetTop <= scrollPosition) {
+                activeSection = sectionId;
+            }
+        });
+
+        if (window.pageYOffset + window.innerHeight >= document.documentElement.scrollHeight - 2) {
+            var lastSection = $sectionTabs.last().data('nav-section');
+            if (lastSection && document.getElementById(lastSection)) {
+                activeSection = lastSection;
+            }
+        }
+
+        $sectionTabs.removeClass('active').find('.nav-link').removeAttr('aria-current');
+        $sectionTabs.filter('[data-nav-section="' + activeSection + '"]')
+            .addClass('active')
+            .find('.nav-link')
+            .attr('aria-current', 'page');
+    }
+
     $('a.abstract').click(function() {
         $(this).parent().parent().find(".abstract.hidden").toggleClass('open');
     });
@@ -69,7 +101,17 @@ $(document).ready(function() {
     }
 
     updateAboutHeaderLeftContent();
-    $(window).on('scroll', updateAboutHeaderLeftContent);
-    $(window).on('resize', updateAboutHeaderLeftContent);
-    $(window).on('hashchange', updateAboutHeaderLeftContent);
+    updateActiveAboutTab();
+    $(window).on('scroll', function() {
+        updateAboutHeaderLeftContent();
+        updateActiveAboutTab();
+    });
+    $(window).on('resize', function() {
+        updateAboutHeaderLeftContent();
+        updateActiveAboutTab();
+    });
+    $(window).on('hashchange', function() {
+        updateAboutHeaderLeftContent();
+        updateActiveAboutTab();
+    });
 });
