@@ -31,6 +31,7 @@ jobs:
         run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
+          PAGES_REPO_NWO: ${{ github.repository }}
 
       - name: Publish generated website
         uses: peaceiris/actions-gh-pages@v4
