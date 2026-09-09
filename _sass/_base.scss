@@ -69,9 +69,6 @@ a.about-name-link {
 
 .theme-toggle-btn i {
   font-size: 0.86rem;
-  vertical-align: middle;
-  position: relative;
-  top: 0px;
   width: 1em;
   height: 1em;
   line-height: 1;
@@ -97,7 +94,12 @@ a.about-name-link {
 }
 
 @media (min-width: 576px) {
-  .navbar-nav {
+  .navbar-nav .nav-item {
+    display: flex;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    display: flex;
     align-items: center;
   }
 
