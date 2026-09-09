@@ -26,7 +26,7 @@ layout: default
         {{ content }}
       </div>
         {% if page.profile %}
-        <div class="profile col-4 {% if page.profile.align == 'left' %}order-first{% endif %}">
+        <div class="profile about-profile {% if page.profile.align == 'left' %}order-first{% endif %}">
           {% if page.profile.image %}
             <img class="img-fluid" src="{{ page.profile.image | prepend: '/assets/img/' | relative_url }}">
           {% endif %}
