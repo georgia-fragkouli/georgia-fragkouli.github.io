@@ -85,11 +85,14 @@ a.about-name-link {
 }
 
 @media (max-width: 575.98px) {
+  .navbar-nav .nav-item .nav-link {
+    padding-right: 0.75rem;
+  }
+
   .navbar-nav .nav-item .theme-toggle-btn {
     width: auto;
     margin-left: auto;
     padding-left: 0;
-    padding-right: 0;
   }
 }
 
