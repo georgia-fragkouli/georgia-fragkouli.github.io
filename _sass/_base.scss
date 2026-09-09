@@ -86,8 +86,9 @@ a.about-name-link {
 
 @media (max-width: 575.98px) {
   .navbar-nav .nav-item .theme-toggle-btn {
-    width: 100%;
-    justify-content: flex-end;
+    width: auto;
+    margin-left: auto;
+    padding-left: 0;
     padding-right: 0;
   }
 }
