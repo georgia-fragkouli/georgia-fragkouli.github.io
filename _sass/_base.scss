@@ -84,6 +84,14 @@ a.about-name-link {
   font-size: 1.04rem;
 }
 
+@media (max-width: 575.98px) {
+  .navbar-nav .nav-item .theme-toggle-btn {
+    width: 100%;
+    justify-content: flex-end;
+    padding-right: 0;
+  }
+}
+
 @media (min-width: 576px) {
   .about-tabs-align .theme-toggle-btn {
     margin-right: -10px;
