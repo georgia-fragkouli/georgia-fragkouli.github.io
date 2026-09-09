@@ -128,6 +128,9 @@
     {% elsif entry.year %}
       {{entry.year}}
     {% endif %}
+    {% if entry.award %}
+      <span class="publication-award"><i class="fas fa-trophy" aria-hidden="true"></i> {{ entry.award }}</span>
+    {% endif %}
     </span>
 
     <span class="links">
